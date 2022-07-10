@@ -13,6 +13,6 @@ export default function useCounter(max: number) {
         cur++
       }
     }, 0)
-  }, [cur, max])
+  }, [])
   return count
 }
