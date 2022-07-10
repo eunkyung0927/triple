@@ -1,5 +1,8 @@
 .Wrapper {
   margin: 50px 0px 140px 723px;
+  animation-name: sequence; 
+  animation-duration: 0.7s;
+  animation-delay: 0.2s;
 }
 .Item {
   font-family: sans-serif;
@@ -21,3 +24,14 @@
 .Apple {
   background-image: url(../public/badge-apple4x.png);
 }
+@keyframes sequence{
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0%);
+      }    
+  }
+  

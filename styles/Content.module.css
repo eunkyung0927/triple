@@ -4,4 +4,18 @@
 .wrapper {
   margin-left: 723px;
   padding-top: 150px;
+  animation-name: sequence; 
+  animation-duration: 0.7s;
+  animation-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+@keyframes sequence{
+  from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }    
 }

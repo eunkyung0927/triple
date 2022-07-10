@@ -12,4 +12,18 @@
   padding-top: 280px;
   left: 100px;
   top: 150px;
+  animation-name: sequence; 
+  animation-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes sequence{
+  from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }    
 }
