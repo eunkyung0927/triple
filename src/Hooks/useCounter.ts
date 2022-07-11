@@ -2,15 +2,14 @@ import { useState, useEffect } from 'react'
 
 export default function useCounter(max: number) {
   const [count, setCount] = useState(0)
-  let cur = count
-  // TODO : 숫자 올라가는 속도 점점 느려지게
+  let step = 1
   useEffect(() => {
     const counter = setInterval(() => {
-      setCount(cur)
-      if (cur >= max) {
+      setCount(Math.round(max * (step / 100)))
+      if (step === 100) {
         clearInterval(counter)
       } else {
-        cur++
+        step++
       }
     }, 0)
   }, [])
